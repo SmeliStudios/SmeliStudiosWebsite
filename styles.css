@@ -317,19 +317,19 @@ h2 {
 }
 
 .about-section {
-  display: grid;
-  gap: 3rem;
   padding-block: 6rem;
   border-top: 1px solid var(--line);
+  text-align: center;
 }
 
 .about-copy {
-  max-width: 44rem;
+  max-width: 52rem;
+  margin-inline: auto;
 }
 
 .about-text {
   color: var(--ink-soft);
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
 .about-text p:last-child {
@@ -338,34 +338,26 @@ h2 {
   font-weight: 700;
 }
 
-.values-list {
+.values-grid {
   display: grid;
-  gap: 0.75rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  gap: 1rem;
+  margin-top: 3rem;
 }
 
-.values-list li {
-  display: flex;
+.value-card {
+  min-height: 7rem;
+  display: grid;
+  place-items: center;
   align-items: center;
-  gap: 0.8rem;
-  min-height: 4rem;
-  padding: 1rem 1.15rem;
+  padding: 1.5rem;
   border: 1px solid var(--line);
-  border-radius: 1rem;
+  border-radius: var(--radius);
   background: var(--card-wash);
-  font-size: 0.9rem;
-  font-weight: 750;
-}
-
-.values-list li::before {
-  content: "";
-  width: 0.5rem;
-  height: 0.5rem;
-  flex: 0 0 auto;
-  border-radius: 50%;
-  background: var(--clay);
+  color: var(--forest);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.25;
 }
 
 .contact-section {
@@ -455,7 +447,7 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .values-list {
+  .values-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -469,15 +461,8 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .about-section {
-    grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
-    gap: 5rem;
-    align-items: start;
-  }
-
-  .values-list {
-    grid-template-columns: 1fr;
-    padding-top: 2rem;
+  .values-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
