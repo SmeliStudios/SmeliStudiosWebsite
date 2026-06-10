@@ -3,7 +3,7 @@
    * SMELISTUDIOS THEME
    * ------------------
    * Change the palette here. Every colour used across the landing page,
-   * geometric logo, and privacy pages references one of these variables.
+   * landing page and privacy pages references one of these variables.
    *
    * Core surfaces and text
    */
@@ -15,30 +15,16 @@
   /* Brand and accent colours */
   --forest: #1d3427;
   --forest-light: #34553f;
-  --moss: #89986f;
   --clay: #b47757;
   --sun: #d7aa58;
 
-  /* Borders, overlays, and shadows */
+  /* Borders and overlays */
   --line: rgba(23, 32, 25, 0.16);
   --card-wash: rgba(255, 255, 255, 0.28);
-  --shadow-color: rgba(28, 39, 30, 0.1);
-
-  /* Temporary geometric horse logo */
-  --logo-stage: #d9dfca;
-  --logo-mane: var(--ink);
-  --logo-ear-back: var(--forest-light);
-  --logo-ear-front: var(--clay);
-  --logo-face-main: var(--paper);
-  --logo-face-light: var(--sun);
-  --logo-cheek: var(--moss);
-  --logo-muzzle: var(--clay);
-  --logo-eye: var(--ink);
 
   /* Layout controls */
   --radius: 1.5rem;
   --max-width: 74rem;
-  --shadow: 0 1.5rem 4rem var(--shadow-color);
 }
 
 * {
@@ -123,10 +109,14 @@ nav a:focus-visible {
 
 .hero {
   min-height: calc(100vh - 5rem);
-  display: grid;
+  display: flex;
   align-items: center;
-  gap: 2.5rem;
   padding-block: 4rem 5rem;
+}
+
+.hero-copy {
+  width: 100%;
+  max-width: 58rem;
 }
 
 .eyebrow {
@@ -188,67 +178,6 @@ h1 em {
 .primary-link:hover,
 .primary-link:focus-visible {
   background: var(--forest-light);
-}
-
-.logo-stage {
-  min-height: 23rem;
-  position: relative;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  border-radius: var(--radius);
-  background: var(--logo-stage);
-  box-shadow: var(--shadow);
-}
-
-.horse-logo {
-  width: min(72%, 19rem);
-  filter: drop-shadow(0 1rem 1.2rem var(--shadow-color));
-}
-
-.logo-mane {
-  fill: var(--logo-mane);
-}
-
-.logo-ear-back {
-  fill: var(--logo-ear-back);
-}
-
-.logo-ear-front {
-  fill: var(--logo-ear-front);
-}
-
-.logo-face-main {
-  fill: var(--logo-face-main);
-}
-
-.logo-face-light {
-  fill: var(--logo-face-light);
-}
-
-.logo-cheek {
-  fill: var(--logo-cheek);
-}
-
-.logo-muzzle {
-  fill: var(--logo-muzzle);
-}
-
-.logo-eye {
-  fill: var(--logo-eye);
-}
-
-.logo-caption {
-  position: absolute;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  margin: 0;
-  color: var(--forest);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.95rem;
-  font-style: italic;
-  line-height: 1.25;
-  text-align: right;
 }
 
 .apps-section {
@@ -478,16 +407,6 @@ h2 {
 }
 
 @media (min-width: 56rem) {
-  .hero {
-    min-height: calc(100vh - 5rem);
-    grid-template-columns: 1.12fr 0.88fr;
-    gap: 5rem;
-  }
-
-  .logo-stage {
-    min-height: 34rem;
-  }
-
   .app-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
