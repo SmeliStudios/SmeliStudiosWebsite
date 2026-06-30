@@ -261,6 +261,18 @@ h2 {
   stroke-width: 2;
 }
 
+.app-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.stir-up-icon {
+  overflow: hidden;
+  background: var(--forest);
+}
+
 .status {
   padding: 0.4rem 0.65rem;
   border: 1px solid var(--line);
@@ -283,17 +295,6 @@ h2 {
 .app-card h3 {
   margin-bottom: 0.8rem;
   font-size: 2.35rem;
-}
-
-.app-wordmark {
-  display: block;
-  width: min(15rem, 82%);
-  height: auto;
-  margin: 0 0 0.95rem -0.2rem;
-}
-
-.stir-up-wordmark {
-  filter: drop-shadow(0 0.15rem 0.2rem rgba(23, 32, 25, 0.08));
 }
 
 .app-summary {
@@ -434,16 +435,6 @@ h2 {
 :focus-visible {
   outline: 3px solid var(--sun);
   outline-offset: 4px;
-}
-
-.visually-hidden {
-  width: 1px;
-  height: 1px;
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
 }
 
 @media (min-width: 40rem) {
