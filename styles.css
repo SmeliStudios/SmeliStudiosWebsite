@@ -261,16 +261,12 @@ h2 {
   stroke-width: 2;
 }
 
-.app-icon img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 .stir-up-icon {
   overflow: hidden;
   background: var(--forest);
+  background-image: url("assets/stir-up-app-icon.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .status {
